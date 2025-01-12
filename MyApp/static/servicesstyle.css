@@ -1,0 +1,98 @@
+/* General Page Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.services-container {
+  padding: 60px 20px 50px; /* Adjust overall padding */
+  max-width: 1200px; /* Restrict overall width */
+  margin: 0 auto;
+
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 75px; /* Push title below navbar */
+  margin-bottom: 50px;
+  color: black;
+}
+
+/* Service Rows */
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.service-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.service-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #7a41ff;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #7a41ff;
+  box-shadow: 0 4px 10px rgba(75, 189, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .service-card {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .service-image {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+      margin-top: 120px; /* Increase margin for smaller screens */
+  }
+
+  .service-title {
+      font-size: 1.5rem;
+  }
+
+  .service-description {
+      font-size: 1rem;
+  }
+}

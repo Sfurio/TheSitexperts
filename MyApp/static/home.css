@@ -1,0 +1,187 @@
+/* General Body Styling */
+body, html {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo-Intro Section */
+#logo-intro-section {
+    background-color: white; /* Light background for contrast */
+    margin-top: 100px;}
+
+#logo-intro-section .logo-container {
+    height: 250px; /* Adjust logo size */
+    background-size: contain; /* Keep logo proportions */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #ddd; /* Optional border for definition */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+#logo-intro-section .logo-container .carousel-item {
+    width: 100%;
+    height: 100%; /* Match the container height */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #logo-intro-section .container {
+        flex-direction: column; /* Stack logo and intro on smaller screens */
+    }
+
+    #logo-intro-section .logo-container {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Introduction Section */
+#intro {
+    margin-top: 0;
+    padding: 20px 0; /* Added slight padding for breathing room */
+}
+
+#intro h2 {
+    font-size: 2.8rem; /* Adjusted font size to keep the text on one line */
+    font-weight: bold;
+    color: black;
+    line-height: 1.2; /* Tightened line spacing */
+    margin-bottom: 1rem;
+    word-break: break-word; /* Prevents awkward breaks */
+}
+
+#intro p {
+    font-size: 1.15rem; /* Slightly larger font size for readability */
+    color: black;
+    line-height: 1.6; /* Improved spacing between lines */
+    max-width: 700px; /* Limits paragraph width for clean alignment */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Carousel Section */
+/* Carousel Image Styling */
+.carousel-item {
+    height: 70vh; /* Reduce the height of the carousel */
+    background-size: cover; /* Maintain image proportions */
+    background-position: center;
+    border-radius: 15px; /* Rounded corners */
+    margin: 0 auto; /* Center the carousel */
+    overflow: hidden; /* Hide any content that overflows the rounded borders */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 50vh; /* Smaller height on smaller screens */
+    }
+}
+
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* Remove Button Blue Outline */
+.carousel-caption .btn {
+    background-color: #7a41ff;
+    color: white;
+    border: none; /* Remove default border */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.service {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.service-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Sites Section */
+#sites {
+    background-color: #000;
+    color: black;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#sites h2 {
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.location-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Center the main container */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.center-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.center-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}

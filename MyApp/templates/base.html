@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}The Sitexperts{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Consolidated CSS -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+<header>
+    <nav id="basenav" class="navbar navbar-expand-lg navbar-dark banner fixed-top">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'thesitexperts.jpg' %}" alt="PokePackers Logo" height="40">
+        </a>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'sites' %}">Sites</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'request' %}">Request A Site</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+    <!-- Main Content Section -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+<footer class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Our Information</h3>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'sites' %}">Sites</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+                <p>&copy; {% now "Y" %} The Sitexperts. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Load JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

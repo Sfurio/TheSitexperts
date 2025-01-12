@@ -1,0 +1,75 @@
+
+header {
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin-top: 75px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    margin-top: 125px;
+}
+
+/* Portfolio Section Styling */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.portfolio-item {
+    background-color: #f8f9fa; /* Light background for portfolio items */
+    border: 1px solid #e9ecef; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    width: calc(48% - 10px); /* Two items per row, with margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.portfolio-item img {
+    border-radius: 8px 8px 0 0; /* Round top corners */
+    width: 100%;
+    height: auto;
+}
+
+.company-name {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.2rem;
+    margin: 15px 10px 5px;
+    color: #343a40; /* Dark text color */
+}
+
+.company-description {
+    font-size: 1rem;
+    color: #6c757d; /* Muted text color */
+    margin: 0 10px 15px;
+}
+
+.site-details {
+    background-color: #ffffff; /* White background */
+    padding: 10px;
+    border-top: 1px solid #e9ecef; /* Top border to separate details */
+    border-radius: 0 0 8px 8px; /* Round bottom corners */
+    font-size: 0.9rem;
+    color: #495057; /* Slightly darker text color */
+}
+
+.site-details p {
+    margin: 5px 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

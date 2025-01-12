@@ -1,0 +1,64 @@
+/* Custom CSS for 'Types of Websites We Create' */
+
+/* Section Styling */
+#site-types {
+    background-color: #f8f9fa; /* Light background */
+    padding: 50px 0; /* Space around the section */
+}
+
+#site-types h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #343a40; /* Dark gray for the heading */
+}
+
+/* Site List Styling */
+.site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.site-item {
+    background-color: #ffffff; /* White background for each item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    width: 30%; /* Set width for each item */
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.site-item h3 {
+    font-size: 1.75rem;
+    color: Black; /* Bootstrap primary color for headings */
+    margin-bottom: 15px;
+}
+
+.site-item p {
+    font-size: 1rem;
+    color: #6c757d; /* Secondary text color */
+    line-height: 1.5;
+}
+
+.site-item:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+@media (max-width: 992px) {
+    .site-item {
+        width: 45%; /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .site-item {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    #site-types h2 {
+        font-size: 2rem; /* Smaller heading on small screens */
+    }
+}

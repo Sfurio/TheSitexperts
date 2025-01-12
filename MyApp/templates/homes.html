@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Website Warriors{% endblock %}
+
+{% block content %}
+
+<!-- Introduction Section with Video -->
+<section id="intro" class="full-width">
+    <div class="row no-gutters">
+        <div class="col-lg-8 d-flex flex-column justify-content-center">
+            <h2>Welcome to the solution for all your company's website needs</h2>
+            <p>We are a leading provider of website building, hosting, and SEO services for local businesses. Our mission is to help businesses establish a strong online presence and grow their customer base.</p>
+        </div>
+        <div class="col-lg-4">
+            <!-- Autoplaying video without sound -->
+            <video id="autoplay-video" width="100%" muted autoplay loop>
+                <source src="{% static 'videos/WebsiteWarriors.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- Carousel Section -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('{% static 'images/design.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Welcome to WebsiteWarriors</h1>
+                <p>Your one-stop shop for website creation and hosting</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('{% static 'images/closeup.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Responsive Designs</h1>
+                <p>Professional websites for any device</p>
+                <a href="#" class="btn btn-primary">Our Portfolio</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('{% static 'images/coding.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Reliable Hosting</h1>
+                <p>Fast and secure hosting for your business</p>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="text-center py-5">
+    <h3>Services We Provide</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="service">
+                    <h4>Website Creation</h4>
+                    <p>Our expert team will design and develop a professional website tailored to your business needs.</p>
+                    <img src="{% static 'images/WebExCode.JPG' %}" class="service-img" alt="Website Creation">
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="service">
+                    <h4>Hosting</h4>
+                    <p>We provide reliable and secure hosting solutions using AWS to ensure your website is always up and running.</p>
+                    <img src="{% static 'images/AWS.JPG' %}" class="service-img" alt="Hosting">
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="service">
+                    <h4>SEO</h4>
+                    <p>Improve your website's visibility on search engines and attract more customers with our SEO services.</p>
+                    <img src="{% static 'images/WebExSEO.JPG' %}" class="service-img" alt="SEO">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Types of Sites Section -->
+<section id="sites" class="py-5 text-center">
+    <div class="container-fluid">
+        <h2>Types of Sites We Create</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>E-Commerce Stores</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Business Pages</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Blogs</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Educational Pages</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Portfolios</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Promotional Pages</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>Online Stores</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="location-card">
+                    <p>And More!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

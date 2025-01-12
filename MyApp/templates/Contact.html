@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'contactstyle.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="contact-container">
+    <div class="contact-info">
+        <h1 class="contact-title">Contact Us</h1>
+        <div class="contact-buttons">
+            <button class="contact-btn" onclick="location.href='tel:+1234567890'">Click to Give us a Call!</button>
+            <button class="contact-btn" onclick="location.href='mailto:info@websitewarriors.com'">Email us with any Concerns!</button>
+        </div>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="{% static 'thesitexperts.jpg' %}" alt="Your Logo" class="logo">
+    </div>
+</div>
+
+{% endblock %}

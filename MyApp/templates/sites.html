@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sitesstyles.css' %}">
+    <title>Our Work</title>
+</head>
+<body>
+    <header>
+        <h1>Websites Developed</h1>
+    </header>
+    <main>
+        <section class="portfolio">
+            <div class="portfolio-item">
+                <a href="https://FreshLookExterior.org" target="_blank">
+                    <img src="{% static 'sampic.jpg' %}" class="card-img-top" alt="Samspic">
+                    <p class="company-name">Fresh Look Exterior</p>
+                    <p class="company-description">A Local House Exterior Cleaning Company</p>
+                    <div class="site-details">
+                        <p><strong>Type of Site:</strong> Business Website</p>
+                        <p><strong>Functionalities:</strong> Contact form, Service listing, Photo gallery, Customer testimonials</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="http://Slayedbymari.com" target="_blank">
+                    <img src="{% static 'marisite.jpg' %}" class="card-img-top" alt="maripic">
+                    <p class="company-name">SlayedbyMari</p>
+                    <p class="company-description">A Local Cosmetic Company</p>
+                    <div class="site-details">
+                        <p><strong>Type of Site:</strong> Business Website</p>
+                        <p><strong>Functionalities:</strong> Contact form, Service listing, Photo gallery, Customer testimonials</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://Pokepackers.com" target="_blank">
+                    <img src="{% static 'PokeSite.jpg' %}" class="card-img-top" alt="Pokesite">
+                    <p class="company-name">PokePackers</p>
+                    <p class="company-description">An online store selling pokemon cards and collectables.</p>
+                    <div class="site-details">
+                        <p><strong>Type of Site:</strong> Online Store</p>
+                        <p><strong>Functionalities:</strong> Cart and Checkout Systems, Easy to use Inventory, Contact Page</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more portfolio items as needed -->
+        </section>
+    </main>
+</body>
+{% endblock content %}

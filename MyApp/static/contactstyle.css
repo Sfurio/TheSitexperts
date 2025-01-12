@@ -1,0 +1,81 @@
+/* General Styling */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Spread content across the container */
+    padding: 150px 20px; /* Space from navbar */
+}
+
+.contact-info {
+    text-align: center;
+    flex: 1; /* Allow contact info to take up available space */
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-btn {
+    font-size: 1.2rem;
+    color: black;
+    background-color: #7a41ff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #4184ff;
+    transform: translateY(-3px);
+}
+
+/* Logo Styling */
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    max-width: 300px; /* Adjust the logo size */
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-top: 20px; /* Space between contact info and logo */
+    }
+}
