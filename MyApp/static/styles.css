@@ -10,10 +10,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+
 #basenav .navbar-brand {
     font-family: 'Arial Black', sans-serif;
     font-size: 1.5rem;
     color: #ffffff;
+    
 }
 
 #basenav .navbar-nav .nav-link {

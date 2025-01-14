@@ -13,30 +13,12 @@
 </head>
 
 <!-- Logo and Introduction Section -->
-<section id="logo-intro-section" class="d-flex align-items-center py-4">
-    <div class="container">
-        <div class="row">
-            <!-- Logo Section -->
-            <div class="col-lg-4 text-center">
-                <div class="logo-container">
-                    <div class="carousel-item active" style="background-image: url('{% static 'thesitexperts.jpg' %}');">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Introduction Section -->
-            <div class="col-lg-8 d-flex align-items-center">
-                <div>
-                    <h2 class="mb-4">Welcome to the solution for all your company's website needs</h2>
-                    <p class="lead">
-                        We are a leading provider of website building, hosting, and SEO services for local businesses.
-                        Our mission is to help businesses establish a strong online presence and grow their customer base.
-                    </p>
-                </div>
-            </div>
-        </div>
+<section id="intro" class="d-flex align-items-center justify-content-center">
+    <div>
+        <h2>Welcome to the solution for all your company's website needs</h2>
     </div>
 </section>
+
 
 <!-- Carousel Section -->
 <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
@@ -48,7 +30,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active" style="background-image: url('{% static 'design.jpg' %}')">
             <div class="carousel-caption d-none d-md-block">
-                <h1>Welcome to WebsiteWarriors</h1>
+                <h1>The Sitexperts</h1>
                 <p>Your one-stop shop for website creation and hosting</p>
                 <a href="#" class="btn btn-primary">Learn More</a>
             </div>
@@ -77,33 +59,53 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<section id="info" class="d-flex align-items-center justify-content-center">
+    <div>
+        <h3 class="infos">
+            We are a leading provider of website building, hosting, and SEO services for local businesses.
+            Our mission is to help businesses establish a strong online presence and grow their customer base.
+        </h3>        
+    </div>
+</section>
+
 <section id="services" class="text-center py-5">
     <h3>Services We Provide</h3>
     <div class="container">
         <div class="row">
+            <!-- Website Creation Card -->
             <div class="col-lg-4 mb-4 d-flex justify-content-center">
-                <div class="service">
-                    <h4>Website Creation</h4>
-                    <p>Our expert team will design and develop a professional website tailored to your business needs.</p>
-                    <img src="{% static 'WebExCode.JPG' %}" class="service-img" alt="Website Creation">
-                </div>
+                <a href="{% url 'website' %}" class="service-card">
+                    <div class="service">
+                        <h4>Website Creation</h4>
+                        <p>Our expert team will design and develop a professional website tailored to your business needs.</p>
+                        <img src="{% static 'WebExCode.JPG' %}" class="service-img" alt="Website Creation">
+                    </div>
+                </a>
             </div>
+            <!-- Hosting Card -->
             <div class="col-lg-4 mb-4 d-flex justify-content-center">
-                <div class="service">
-                    <h4>Hosting</h4>
-                    <p>We provide reliable and secure hosting solutions using AWS to ensure your website is always up and running.</p>
-                    <img src="{% static 'AWS.JPG' %}" class="service-img" alt="Hosting">
-                </div>
+                <a href="{% url 'hosting' %}" class="service-card">
+                    <div class="service">
+                        <h4>Hosting</h4>
+                        <p>We provide reliable and secure hosting solutions using AWS to ensure your website is always up and running.</p>
+                        <img src="{% static 'AWS.JPG' %}" class="service-img" alt="Hosting">
+                    </div>
+                </a>
             </div>
+            <!-- SEO Card -->
             <div class="col-lg-4 mb-4 d-flex justify-content-center">
-                <div class="service">
-                    <h4>SEO</h4>
-                    <p>Improve your website's visibility on search engines and attract more customers with our SEO services.</p>
-                    <img src="{% static 'WebExSEO.JPG' %}" class="service-img" alt="SEO">
-                </div>
+                <a href="{% url 'seo' %}" class="service-card">
+                    <div class="service">
+                        <h4>SEO</h4>
+                        <p>Improve your website's visibility on search engines and attract more customers with our SEO services.</p>
+                        <img src="{% static 'WebExSEO.JPG' %}" class="service-img" alt="SEO">
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
 
 {% endblock %}

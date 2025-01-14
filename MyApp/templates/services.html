@@ -11,7 +11,7 @@
     <h2 class="section-title">Services We Provide</h2>
 
     <!-- Website Creation Card -->
-    <div class="row service-card mb-5">
+    <a href="{% url 'website' %}" class="row service-card mb-5 text-decoration-none">
         <div class="col-lg-4 d-flex align-items-center justify-content-center">
             <img src="{% static 'WebExCode.JPG' %}" alt="Website Creation" class="service-image">
         </div>
@@ -20,14 +20,11 @@
             <p class="service-description">
                 Our expert team will design and develop a professional website tailored to your business needs. We ensure scalability, performance, and functionality that align perfectly with your brand identity.
             </p>
-            <button type="button" class="btn btn-primary service-button" onclick="location.href='{% url 'website' %}'">
-                Learn More
-            </button>
         </div>
-    </div>
+    </a>
 
     <!-- Hosting Card -->
-    <div class="row service-card mb-5 flex-row-reverse">
+    <a href="{% url 'hosting' %}" class="row service-card mb-5 flex-row-reverse text-decoration-none">
         <div class="col-lg-4 d-flex align-items-center justify-content-center">
             <img src="{% static 'amazon-web.jpg' %}" alt="Hosting" class="service-image">
         </div>
@@ -36,14 +33,11 @@
             <p class="service-description">
                 Reliable hosting services powered by AWS ensure optimal performance, security, and uptime for your website.
             </p>
-            <button type="button" class="btn btn-primary service-button" onclick="location.href='{% url 'hosting' %}'">
-                Learn More
-            </button>
         </div>
-    </div>
+    </a>
 
     <!-- SEO Card -->
-    <div class="row service-card mb-5">
+    <a href="{% url 'seo' %}" class="row service-card mb-5 text-decoration-none">
         <div class="col-lg-4 d-flex align-items-center justify-content-center">
             <img src="{% static 'GoogleSEO.webp' %}" alt="SEO" class="service-image">
         </div>
@@ -52,10 +46,7 @@
             <p class="service-description">
                 Improve your website's visibility and attract customers with our proven SEO strategies.
             </p>
-            <button type="button" class="btn btn-primary service-button" onclick="location.href='{% url 'seo' %}'">
-                Learn More
-            </button>
         </div>
-    </div>
+    </a>
 </div>
 {% endblock %}
