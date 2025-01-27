@@ -1,7 +1,7 @@
 /* General Body Styling */
 body, html {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: black;
     background-color: white;
     margin: 0;
@@ -11,7 +11,8 @@ body, html {
 /* Logo-Intro Section */
 #logo-intro-section {
     background-color: white; /* Light background for contrast */
-    margin-top: 100px;}
+    margin-top: 100px;
+}
 
 #logo-intro-section .logo-container {
     height: 250px; /* Adjust logo size */
@@ -38,76 +39,58 @@ body, html {
     }
 }
 
-
+/* Intro Section */
 #intro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack content vertically */
-    height: 35vh; /* Full viewport height */
+    height: 35vh; /* Adjust as needed */
     text-align: center;
     background-color: white;
     margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Optional rounded corners */
 }
 
 #intro h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Larger for emphasis */
     font-weight: bold;
-    color: black;
-    line-height: 1.2;
-    margin: 0 auto;
-    max-width: 80%;
-    word-wrap: break-word; /* Ensure text wraps properly */
+    color: #343a40;
+    margin-bottom: 1rem;
 }
 
-#info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stack content vertically */
-    height: 35vh; /* Full viewport height */
-    text-align: center;
-    background-color: white;
-    margin-top: 20px;
-}
-
-#info h3 {
-    font-size: 2.0rem;
+#intro h2 span {
+    color: #7a41ff; /* Highlighted key words in a different color */
     font-weight: bold;
-    color: black;
-    line-height: 1.2;
-    margin: 0 auto;
-    max-width: 100%;
-    word-wrap: break-word; /* Ensure text wraps properly */
 }
 
 #intro p {
-    font-size: 1.15rem; /* Slightly larger font size for readability */
-    color: black;
+    font-size: 1.2rem; /* Slightly larger for readability */
+    color: #555;
     line-height: 1.6; /* Improved spacing between lines */
-    max-width: 700px; /* Limits paragraph width for clean alignment */
-    margin: 0 auto; /* Center the paragraph */
+    max-width: 700px; /* Limit paragraph width */
+    margin: 0 auto; /* Center-align the text */
+    text-align: center;
 }
 
 /* Carousel Section */
-/* Carousel Image Styling */
 .carousel-item {
-    height: 70vh; /* Reduce the height of the carousel */
-    background-size: cover; /* Maintain image proportions */
+    height: 70vh; /* Adjust height */
+    background-size: cover;
     background-position: center;
-    border-radius: 15px; /* Rounded corners */
-    margin: 0 auto; /* Center the carousel */
-    overflow: hidden; /* Hide any content that overflows the rounded borders */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
-/* Adjust for smaller screens */
 @media (max-width: 768px) {
     .carousel-item {
-        height: 50vh; /* Smaller height on smaller screens */
+        height: 50vh; /* Smaller height for smaller screens */
     }
 }
-
 
 .carousel-caption {
     position: absolute;
@@ -128,136 +111,211 @@ body, html {
     margin-top: 1rem;
 }
 
-/* Remove Button Blue Outline */
+/* Button Styling */
 .carousel-caption .btn {
     background-color: #7a41ff;
     color: white;
-    border: none; /* Remove default border */
-    outline: none; /* Remove focus outline */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     border-radius: 50px;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
 }
 
-
-
-
 /* Services Section */
 #services {
     padding: 50px 0;
     background-color: white;
+    text-align: center;
 }
 
 #services h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
     margin-bottom: 50px;
+    color: #343a40;
 }
 
+/* Individual Service Block */
 .service {
-    background-color: white;
+    background-color: #ffffff; /* Light gray background for box */
     color: black;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin: 0 auto 30px; /* Center-align and add space between blocks */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect for Service Blocks */
+.service:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Image inside the Service Block */
 .service-img {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-bottom: 15px; /* Space between image and text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
 }
 
-/* Sites Section */
-#sites {
-    background-color: #000;
-    color: black;
-    text-align: center;
-    padding: 50px 0;
+/* Text inside the Service Block */
+.service h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
 }
 
-#sites h2 {
-    font-size: 2.5em;
-    color: black;
-    margin-bottom: 30px;
+.service p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
-.location-card {
-    background-color: #111;
-    padding: 20px;
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+    .service {
+        display: inline-block; /* Inline for desktop layout */
+        margin: 0 15px 30px; /* Space between columns */
+        vertical-align: top; /* Align to top */
+    }
+}
+
+@media (max-width: 768px) {
+    #services h3 {
+        font-size: 1.8rem; /* Adjust heading size for smaller screens */
+    }
+
+    .service {
+        max-width: 100%; /* Full-width for smaller screens */
+        margin: 0 auto 20px; /* Space between blocks */
+    }
+
+    .service-img {
+        height: 150px; /* Smaller images for smaller screens */
+    }
+}
+
+
+/* Info Block Section */
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
     border-radius: 10px;
-    color: black;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
 }
 
-/* Center the main container */
-.center-content {
+.block.b {
+    flex-direction: row-reverse;
+}
+
+.text {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.media {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-    margin: 0;
 }
 
-.center-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.center-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.6;
-}
-
-/* General Card Styling */
-.service-card {
-    text-decoration: none; /* Remove underline for links */
-    color: inherit; /* Maintain text color */
-    display: block; /* Make the entire area clickable */
-    border: 2px solid transparent; /* Transparent border */
-    border-radius: 0; /* Preserve original shapes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for default state */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    padding: 20px; /* Add some padding for a uniform look */
-    background: #ffffff; /* White background for clarity */
-}
-
-/* Card Hover Effect */
-.service-card:hover {
-    transform: translateY(-8px); /* Elevate the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
-    border-color: #7a41ff; /* Highlight with a purple border */
-    cursor: pointer; /* Pointer cursor for interactivity */
-}
-
-/* Individual Card Colors (Optional) */
-.service-card:nth-child(1):hover {
-    border-color: #ff6f61; /* Red border for the first card */
-}
-
-.service-card:nth-child(2):hover {
-    border-color: #34c759; /* Green border for the second card */
-}
-
-.service-card:nth-child(3):hover {
-    border-color: #007aff; /* Blue border for the third card */
-}
-
-/* Image Styling */
-.service-img {
-    width: 100%; /* Ensure images fit their container */
+.media img,
+.media video {
+    max-width: 80%; /* Consistent media size */
     height: auto;
-    margin-top: 15px;
-    border-radius: 5px; /* Optional: Slight rounding for images */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Media shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .block.b {
+        flex-direction: column;
+    }
+
+    .text {
+        padding: 0;
+    }
+
+    .media img,
+    .media video {
+        max-width: 100%;
+    }
+}
+
+/* CTA Section */
+#cta-section {
+    text-align: center;
+    background-color: #ffffff; /* Light gray background */
+    padding: 30px 20px; /* Reduced padding for tighter spacing */
+    margin-top: 30px; /* Reduced margin to move closer to previous section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#cta-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Primary button color */
+    border-radius: 50px; /* Rounded button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cta-button:hover {
+    background-color: #7a41ff; /* purple on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    color: #ffffff !important; /* Keep text color the same */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #cta-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
 }
 
