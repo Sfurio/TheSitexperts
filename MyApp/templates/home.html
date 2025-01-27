@@ -15,7 +15,7 @@
 <!-- Logo and Introduction Section -->
 <section id="intro" class="d-flex align-items-center justify-content-center">
     <div>
-        <h2>Welcome to the solution for all your company's website needs</h2>
+        <h2>Your <span>Ultimate Solution</span> for All Your Website <span>Needs</span></h2>
     </div>
 </section>
 
@@ -60,14 +60,54 @@
     </a>
 </div>
 
-<section id="info" class="d-flex align-items-center justify-content-center">
+<section class="info-block">
+  <div class="block a">
+    <div class="text">
+      <h2>Our Mission</h2>
+      <p>We are a leading provider of website building, hosting, and SEO services for local businesses.</p>
+    </div>
+    <div class="media">
+      <video class="responsive-video" autoplay loop muted>
+        <source src="{% static 'website1.mp4' %}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="block b">
+      <div class="text">
+        <h2>Hosting Solutions</h2>
+        <p>We provide reliable and secure hosting solutions using AWS to ensure your website is always running.</p>
+      </div>
+    <div class="media">
+      <video class="responsive-video" autoplay loop muted>
+        <source src="{% static 'website2.mp4' %}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="block a">
+    <div class="text">
+      <h2>SEO Services</h2>
+      <p>Improve your website's visibility and attract more customers with our expert SEO strategies.</p>
+    </div>
+    <div class="media">
+      <video class="responsive-video" autoplay loop muted>
+        <source src="{% static 'website3.mp4' %}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+  
+<!-- <section id="info" class="d-flex align-items-center justify-content-center">
     <div>
         <h3 class="infos">
             We are a leading provider of website building, hosting, and SEO services for local businesses.
             Our mission is to help businesses establish a strong online presence and grow their customer base.
         </h3>        
     </div>
-</section>
+</section> -->
 
 <section id="services" class="text-center py-5">
     <h3>Services We Provide</h3>
@@ -105,7 +145,12 @@
             </div>
         </div>
     </div>
+    <div id="cta-section">
+        <h3>Ready to Build Your Dream Website?</h3>
+        <a href="/request" class="cta-button">Request A Site</a>
+    </div>
 </section>
+
 
 
 {% endblock %}

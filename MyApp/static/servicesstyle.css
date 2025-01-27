@@ -118,13 +118,13 @@ body {
 
 /* Adjust Individual Cards (Optional) */
 .service-card:nth-child(1):hover {
-  border-color: #ff6f61; /* Red outline for first card */
+  border-color: #6f42c1; /* Purple outline for first card */
 }
 
 .service-card:nth-child(2):hover {
-  border-color: #34c759; /* Green outline for second card */
+  border-color: #6f42c1; /* Green outline for second card */
 }
 
 .service-card:nth-child(3):hover {
-  border-color: #007aff; /* Blue outline for third card */
+  border-color: #6f42c1; /* Blue outline for third card */
 }
