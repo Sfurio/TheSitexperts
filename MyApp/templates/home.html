@@ -16,6 +16,7 @@
 <section id="intro" class="d-flex align-items-center justify-content-center">
     <div>
         <h2>Welcome to the solution for all your company's website needs</h2>
+        <p class="mt-3">Custom websites, reliable hosting, and expert SEO services tailored to grow your business.</p>
     </div>
 </section>
 
@@ -31,22 +32,22 @@
         <div class="carousel-item active" style="background-image: url('{% static 'design.jpg' %}')">
             <div class="carousel-caption d-none d-md-block">
                 <h1>The Sitexperts</h1>
-                <p>Your one-stop shop for website creation and hosting</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <p>Affordable website packages for businesses of all sizes</p>
+                <a href="{% url 'services' %}" class="btn btn-primary">Learn More</a>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url('{% static 'closeup.jpg' %}')">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Responsive Designs</h1>
-                <p>Professional websites for any device</p>
-                <a href="#" class="btn btn-primary">Our Portfolio</a>
+                <p>Professional websites that look great on any device</p>
+                <a href="{% url 'sites' %}" class="btn btn-primary">Our Portfolio</a>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url('{% static 'coding.jpg' %}')">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Reliable Hosting</h1>
-                <p>Fast and secure hosting for your business</p>
-                <a href="#" class="btn btn-primary">Get Started</a>
+                <p>Secure and fast hosting for your business</p>
+                <a href="{% url 'hosting' %}" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </div>
