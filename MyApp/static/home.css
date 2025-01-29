@@ -6,7 +6,9 @@ body, html {
     background-color: white;
     margin: 0;
     padding: 0;
+
 }
+
 
 /* Logo-Intro Section */
 #logo-intro-section {
@@ -38,27 +40,26 @@ body, html {
         margin-bottom: 20px;
     }
 }
-
-/* Intro Section */
 #intro {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack content vertically */
-    height: 35vh; /* Adjust as needed */
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw; /* Full viewport width */
     text-align: center;
-    background-color: white;
-    margin-top: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 10px; /* Optional rounded corners */
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
 }
+
 
 #intro h2 {
     font-size: 2.5rem; /* Larger for emphasis */
     font-weight: bold;
     color: #343a40;
     margin-bottom: 1rem;
+
 }
 
 #intro h2 span {
@@ -75,15 +76,20 @@ body, html {
     text-align: center;
 }
 
+#carousel {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
 /* Carousel Section */
 .carousel-item {
-    height: 70vh; /* Adjust height */
+    height: 90vh; /* Adjust height */
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+   
 }
 
 @media (max-width: 768px) {
@@ -126,9 +132,10 @@ body, html {
 
 /* Services Section */
 #services {
-    padding: 50px 0;
     background-color: white;
     text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 #services h3 {
@@ -142,12 +149,16 @@ body, html {
 .service {
     background-color: #ffffff; /* Light gray background for box */
     color: black;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 300px;
+    height: 450px;
     margin: 0 auto 30px; /* Center-align and add space between blocks */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* Hover Effect for Service Blocks */
@@ -158,10 +169,11 @@ body, html {
 
 /* Image inside the Service Block */
 .service-img {
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 15px; /* Space between image and text */
+    margin-top: 25px;
+    margin-bottom: 5px; /* Space between image and text */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
 }
 
@@ -212,6 +224,10 @@ body, html {
     gap: 40px;
     padding: 40px 20px;
     background-color: #ffffff;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .block {
@@ -273,15 +289,15 @@ body, html {
 /* CTA Section */
 #cta-section {
     text-align: center;
-    background-color: #ffffff; /* Light gray background */
-    padding: 30px 20px; /* Reduced padding for tighter spacing */
-    margin-top: 30px; /* Reduced margin to move closer to previous section */
+    background-color: white; /* Light gray background */
+    padding: 10px 10px; /* Reduced padding for tighter spacing */
+    margin-top: 100px; /* Reduced margin to move closer to previous section */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 100px;
 }
 
 #cta-section h3 {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: bold;
     color: #343a40;
     margin-bottom: 20px;
@@ -293,11 +309,12 @@ body, html {
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff;
-    background-color: #007bff; /* Primary button color */
+    background-color: #008cff; /* Primary button color */
     border-radius: 50px; /* Rounded button */
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%
 }
 
 .cta-button:hover {

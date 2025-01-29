@@ -15,50 +15,53 @@
 <!-- Logo and Introduction Section -->
 <section id="intro" class="d-flex align-items-center justify-content-center">
     <div>
-        <h2>Your <span>Ultimate Solution</span> for All Your Website <span>Needs</span></h2>
+        <h2>The <span>Ultimate Solution</span> for All Your Website <span>Needs</span></h2>
     </div>
 </section>
 
 
+   
 <!-- Carousel Section -->
-<div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: url('{% static 'design.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>The Sitexperts</h1>
-                <p>Your one-stop shop for website creation and hosting</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+ <section id="carousel" class="carousel slide mt-0">
+    <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('{% static 'design.jpg' %}')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The Sitexperts</h1>
+                    <p>Your one-stop shop for website creation and hosting</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('{% static 'closeup.jpg' %}')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Responsive Designs</h1>
+                    <p>Professional websites for any device</p>
+                    <a href="#" class="btn btn-primary">Our Portfolio</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('{% static 'coding.jpg' %}')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Reliable Hosting</h1>
+                    <p>Fast and secure hosting for your business</p>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
             </div>
         </div>
-        <div class="carousel-item" style="background-image: url('{% static 'closeup.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Responsive Designs</h1>
-                <p>Professional websites for any device</p>
-                <a href="#" class="btn btn-primary">Our Portfolio</a>
-            </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('{% static 'coding.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Reliable Hosting</h1>
-                <p>Fast and secure hosting for your business</p>
-                <a href="#" class="btn btn-primary">Get Started</a>
-            </div>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<section/>
 
 <section class="info-block">
   <div class="block a">
@@ -87,7 +90,7 @@
   </div>
   <div class="block a">
     <div class="text">
-      <h2>SEO Services</h2>
+      <h2>Search Engine Optimization</h2>
       <p>Improve your website's visibility and attract more customers with our expert SEO strategies.</p>
     </div>
     <div class="media">
@@ -119,7 +122,7 @@
                     <div class="service">
                         <h4>Website Creation</h4>
                         <p>Our expert team will design and develop a professional website tailored to your business needs.</p>
-                        <img src="{% static 'WebExCode.JPG' %}" class="service-img" alt="Website Creation">
+                        <img src="{% static 'new-website-in-2024.jpeg' %}" class="service-img" alt="Website Creation">
                     </div>
                 </a>
             </div>
