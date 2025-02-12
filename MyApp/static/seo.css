@@ -7,10 +7,11 @@ body {
 }
 
 header {
-    background-color: #f8f9fa; /* Light background for the header */
+    background-color: white; /* Light background for the header */
     padding: 20px 0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 35px;
 }
 
 header h1 {

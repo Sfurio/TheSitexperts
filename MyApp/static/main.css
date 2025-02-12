@@ -8,9 +8,7 @@ body, html {
     padding: 0;
     height: 100%;
     min-height: 100vh; /* Ensures the body fills the entire viewport */
-
 }
-
 
 /* Image Styling */
 img {
@@ -24,12 +22,6 @@ img {
     background-size: cover;
     background-position: center;
     background-color: white;
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        height: 50vh;
-    }
 }
 
 /* Carousel Caption Styling */
@@ -121,13 +113,6 @@ img {
     flex-wrap: nowrap; /* Keeps items in a single row */
 }
 
-/* Responsive Adjustment */
-@media (max-width: 992px) {
-    #services .row {
-        flex-wrap: wrap; /* Stacks items if screen width is too narrow */
-    }
-}
-
 /* Footer */
 footer {
     background-color: #7137fa;
@@ -161,6 +146,7 @@ footer ul li a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 #crx-root {
     display: none;
 }
@@ -191,6 +177,7 @@ footer p {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .navbar-brand {
     position: absolute;
     left: 50%;
@@ -198,10 +185,8 @@ footer p {
     text-align: center;
 }
 
-
 .navbar-brand img {
     height: 35px;
-    
 }
 
 .banner a:hover, #basenav .navbar-nav .nav-link:hover {
@@ -221,25 +206,6 @@ footer p {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    #basenav .navbar-nav {
-        text-align: center;
-    }
-
-    #basenav .navbar-nav .nav-link {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-}
-
-/* Video Styling */
-video {
-    border: none;
-    border-radius: 0;
-}
-
-/* Sites Section */
 /* Sites Section */
 #sites {
     background-color: white; /* Black background for the entire section */
@@ -264,3 +230,54 @@ video {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
+/* General Mobile Optimizations */
+@media (max-width: 768px) {
+    body, html {
+        font-size: 16px; /* Increase base font size for readability */
+    }
+
+    /* Navbar Adjustments */
+    .navbar-brand {
+        left: 10px;
+        transform: none;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px 0;
+    }
+
+    /* Make Service and Sites Sections Stack Vertically */
+    #services .row, #sites .row {
+        flex-wrap: wrap;
+    }
+
+    .service, .location-card {
+        max-width: 100%;
+        flex: none;
+    }
+
+    /* Footer Layout Optimization */
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Carousel Adjustments */
+    .carousel-caption {
+        max-width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}

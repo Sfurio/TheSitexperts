@@ -30,27 +30,19 @@ body, html {
     height: 100%; /* Match the container height */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #logo-intro-section .container {
-        flex-direction: column; /* Stack logo and intro on smaller screens */
-    }
-
-    #logo-intro-section .logo-container {
-        margin-bottom: 20px;
-    }
-}
 #intro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 40vh;
     width: 100vw; /* Full viewport width */
     text-align: center;
     margin: 0;
     padding: 0;
     margin-left: -20px;
+    margin-bottom: -10px;
+    margin-top: 20px;
 }
 
 
@@ -65,6 +57,7 @@ body, html {
 #intro h2 span {
     color: #7a41ff; /* Highlighted key words in a different color */
     font-weight: bold;
+    font-style: italic;
 }
 
 #intro p {
@@ -83,7 +76,7 @@ body, html {
 
 /* Carousel Section */
 .carousel-item {
-    height: 90vh; /* Adjust height */
+    height: 65vh; /* Adjust height */
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -92,12 +85,7 @@ body, html {
    
 }
 
-@media (max-width: 768px) {
-    .carousel-item {
-        height: 50vh; /* Smaller height for smaller screens */
-    }
-}
-
+/* Carousel Caption Styling */
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -105,21 +93,40 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    max-width: 70%;
+    width: 100%;
+    padding: 0 15px;
 }
 
 .carousel-caption h1 {
-    font-size: 2.5rem;
+    color: white;
+    outline: black;
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 1);
     font-weight: bold;
 }
-
-.carousel-caption p {
-    font-size: 1.25rem;
-    margin-top: 1rem;
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1;
+}
+.carousel-caption {
+    z-index: 2; /* Ensures the text stays on top */
 }
 
+
+.carousel-caption p {
+    color: white;
+    outline: black;
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 1);
+}
 /* Button Styling */
 .carousel-caption .btn {
-    background-color: #7a41ff;
+    background-color: #4c76e6;
     color: white;
     border: none;
     outline: none;
@@ -130,91 +137,67 @@ body, html {
     transition: all 0.3s ease-in-out;
 }
 
-/* Services Section */
 #services {
     background-color: white;
-    text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
+    padding: 60px 0;
 }
 
 #services h3 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    color: #343a40;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
 }
 
-/* Individual Service Block */
+/* Service Card Styling */
+.service-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
 .service {
-    background-color: #ffffff; /* Light gray background for box */
-    color: black;
-    padding: 10px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    height: 450px;
-    margin: 0 auto 30px; /* Center-align and add space between blocks */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 320px; /* Ensure all cards are the same size as the middle one */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
-/* Hover Effect for Service Blocks */
 .service:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Image inside the Service Block */
-.service-img {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-top: 25px;
-    margin-bottom: 5px; /* Space between image and text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
-}
-
-/* Text inside the Service Block */
 .service h4 {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #343a40;
     margin-bottom: 10px;
+    font-weight: 600;
+    color: #4c76e6;
 }
 
 .service p {
     font-size: 1rem;
     color: #555;
-    line-height: 1.6;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
-/* Responsive Adjustments */
-@media (min-width: 992px) {
-    .service {
-        display: inline-block; /* Inline for desktop layout */
-        margin: 0 15px 30px; /* Space between columns */
-        vertical-align: top; /* Align to top */
-    }
+.service-img {
+    width: 100%;
+    height: 225px;
+    border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    #services h3 {
-        font-size: 1.8rem; /* Adjust heading size for smaller screens */
-    }
-
-    .service {
-        max-width: 100%; /* Full-width for smaller screens */
-        margin: 0 auto 20px; /* Space between blocks */
-    }
-
-    .service-img {
-        height: 150px; /* Smaller images for smaller screens */
-    }
-}
 
 
 /* Info Block Section */
@@ -265,27 +248,6 @@ body, html {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Media shadow */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .block {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .block.b {
-        flex-direction: column;
-    }
-
-    .text {
-        padding: 0;
-    }
-
-    .media img,
-    .media video {
-        max-width: 100%;
-    }
-}
-
 /* CTA Section */
 #cta-section {
     text-align: center;
@@ -309,7 +271,7 @@ body, html {
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff;
-    background-color: #008cff; /* Primary button color */
+    background-color: #4c76e6; /* Primary button color */
     border-radius: 50px; /* Rounded button */
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -324,15 +286,151 @@ body, html {
     color: #ffffff !important; /* Keep text color the same */
 }
 
-/* Responsive Adjustments */
+/* Mobile Optimization */
 @media (max-width: 768px) {
+
+    /* General Styles */
+    body, html {
+        padding: 0 15px; /* Add padding to prevent text from touching edges */
+    }
+
+    /* Logo-Intro Section */
+    #intro {
+        height: 60vh; /* Adjust intro height for mobile */
+        margin-top: 10px; /* Add a little margin to the top */
+    }
+
+    #intro h2 {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    #intro p {
+        font-size: 1rem; /* Smaller font for better readability */
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    /* Carousel Section */
+    #carousel {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .carousel-item {
+        height: 50vh; /* Adjust height for smaller screens */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel-caption {
+        padding: 0 10px; /* Less padding on mobile */
+    }
+
+    /* Info Block Section */
+    .info-block {
+        flex-direction: column; /* Stack the blocks vertically */
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .block {
+        flex-direction: column; /* Stack the text and video/media */
+        margin-bottom: 30px;
+    }
+
+    .block.b {
+        flex-direction: column-reverse; /* Stack in reverse order for better layout */
+    }
+
+    .media img,
+    .media video {
+        max-width: 100%; /* Ensure media fits the container */
+        height: auto;
+    }
+
+    /* Services Section */
+    #services .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .service-card {
+        margin-bottom: 20px; /* Add spacing between service cards */
+        width: 100%; /* Make the cards take full width on mobile */
+    }
+
+    .service {
+        padding: 15px; /* Reduce padding for smaller screens */
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .service-img {
+        height: auto;
+        max-width: 100%; /* Ensure images fit inside the container */
+        margin-bottom: 10px;
+    }
+
+    /* CTA Section */
+    #cta-section {
+        margin-top: 20px;
+        padding: 20px 10px;
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button text size */
+        width: 100%; /* Full width for mobile */
+        padding: 15px 0;
+    }
+}
+
+/* For very small screens (under 480px) */
+@media (max-width: 480px) {
+    #intro h2 {
+        font-size: 1.5rem; /* Even smaller font size for tiny screens */
+    }
+
+    #intro p {
+        font-size: 0.9rem; /* Smaller font for text */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.2rem; /* Adjust heading size in the carousel */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    /* Service Cards */
+    .service h4 {
+        font-size: 1.2rem; /* Adjust card title size */
+    }
+
+    .service p {
+        font-size: 0.9rem; /* Adjust card paragraph font size */
+    }
+
+    .service-img {
+        height: 150px; /* Reduce image size */
+        object-fit: cover; /* Ensure images cover the area without stretching */
+    }
+
+    /* Info Block Section */
+    .block {
+        padding: 15px; /* Reduce padding in info blocks */
+    }
+
+    .block .text {
+        padding: 10px;
+    }
+
+    /* CTA Section */
     #cta-section h3 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust CTA heading size */
     }
 
     .cta-button {
         font-size: 1rem;
-        padding: 12px 25px;
+        padding: 12px 0; /* Reduce padding in CTA button */
     }
 }
-
