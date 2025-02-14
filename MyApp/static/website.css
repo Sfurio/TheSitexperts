@@ -1,28 +1,41 @@
-/* Custom CSS styles specific to the content section */
-
+/* General Styling */
 body {
     padding-top: 56px; /* Keeps alignment for fixed navbar */
     font-family: 'Arial', sans-serif;
     color: #333;
+    margin: 0;
+    background-color: #f8f9fa;
 }
 
 header h1 {
-    background-color: white; /* Light grey background for header */
+    background-color: #f8f9fa; /* Light grey background for header */
     padding: 20px 0;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 35px;
+    font-size: 2.5rem; /* Adjusted for a more prominent header */
+    color: Black; /* Soft blue color for header text */
 }
 
-.container .content h2, 
+.container .content {
+    background-color: #ffffff; /* White background for content */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.container .content h2,
 .container .content h3 {
     color: #343a40;
     margin-bottom: 15px;
+    font-size: 1.8rem; /* Larger subheaders for better readability */
 }
 
 .container .content p {
     margin-bottom: 15px;
     line-height: 1.6;
+    font-size: 1rem; /* Slightly larger text for better readability */
 }
 
 .container .content ul {
@@ -33,5 +46,63 @@ header h1 {
 .container .content ul li {
     list-style-type: disc;
     margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
+/* Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container .content h2 {
+        font-size: 1.5rem; /* Smaller header size for mobile */
+    }
+
+    .container .content h3 {
+        font-size: 1.3rem;
+    }
+
+    .container .content p {
+        font-size: 0.95rem; /* Smaller text for mobile screens */
+    }
+
+    .container .content ul li {
+        font-size: 1rem; /* Adjusted font size for better readability */
+    }
+
+    .container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Enhancing Button Styles */
+.submit-button {
+    background-color: #7a41ff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #4184ff;
+    transform: translateY(-2px);
+}
+
+/* Accessibility Improvements */
+ul {
+    color: #555;
+}
+
+a {
+    color: #7a41ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

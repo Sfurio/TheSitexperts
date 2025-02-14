@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'thankstyle.css' %}">
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="thank-you-message">
+      <h1>Thank You</h1>
+      <p>Your request has been submitted successfully. We will get back to you soon.</p>
+    </div>
+    <div class="logo">
+      <img src="{% static 'thesitexperts.JPG' %}" alt="Logo">
+    </div>
+  </div>
+</body>
+{% endblock content %}

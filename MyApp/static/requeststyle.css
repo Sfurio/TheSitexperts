@@ -70,6 +70,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* Logo Styling */
 .logo-container {
     flex-shrink: 0;
 }
@@ -80,6 +81,43 @@ body {
     margin-top: 75px;
 }
 
-.form-container {
-    flex-grow: 1;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .request-title {
+        font-size: 2rem;
+    }
+
+    .request-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .request-container {
+        padding: 30px 15px; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Form Enhancements */
+.form-control:focus {
+    border-color: #7a41ff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(122, 65, 255, 0.5); /* Subtle glow effect */
+}
+
+.submit-button:focus {
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Accessibility Improvements */
+input, select, textarea {
+    background-color: #fafafa; /* Subtle background color for fields */
 }

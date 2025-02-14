@@ -11,7 +11,6 @@ body {
   padding: 60px 20px 50px; /* Adjust overall padding */
   max-width: 1200px; /* Restrict overall width */
   margin: 0 auto;
-
 }
 
 /* Section Title */
@@ -30,6 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .service-image {
@@ -72,6 +72,9 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
+  .service-title{
+    margin-top: 25px;
+  }
   .service-card {
       flex-direction: column;
       text-align: center;
@@ -79,13 +82,22 @@ body {
 
   .service-image {
       margin-bottom: 20px;
+      max-height: 225px; /* Adjust image size for mobile */
+  }
+
+  .service-title {
+    font-size: 1.75rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .section-title {
       font-size: 2rem;
-      margin-top: 120px; /* Increase margin for smaller screens */
+      margin-top: 60px; /* Increase margin for smaller screens */
   }
 
   .service-title {
@@ -95,6 +107,10 @@ body {
   .service-description {
       font-size: 1rem;
   }
+
+  .service-image {
+    max-height: 180px; /* Adjust image size for smaller screens */
+  }
 }
 
 /* Default Card Styling */
@@ -102,7 +118,6 @@ body {
   border: 2px solid transparent; /* Transparent border for layout stability */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   background-color: white; /* Consistent background */
   text-decoration: none;
   color: inherit; /* Keep text colors */

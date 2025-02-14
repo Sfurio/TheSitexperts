@@ -30,6 +30,7 @@ urlpatterns = [
     path('websitecreation/', views.website, name='website'),
     path('seoinfo/', views.seo, name='seo'),
     path('hosting/', views.hosting, name='hosting'),
+    path('success/', views.success, name='success'),
 
 
 

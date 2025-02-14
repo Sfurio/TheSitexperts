@@ -22,7 +22,7 @@
 
    
 <!-- Carousel Section -->
- <section id="carousel" class="carousel slide mt-0">
+<section id="carousel" class="carousel slide mt-0">
     <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -31,21 +31,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active" style="background-image: url('{% static 'design.jpg' %}')">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h1>Responsive Designs</h1>
                     <p>Professional websites for any device</p>
                     <a href="{% url 'sites' %}" class="btn btn-primary">Our Portfolio</a>
                 </div>
             </div>
             <div class="carousel-item" style="background-image: url('{% static 'closeup.jpg' %}')">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h1>Search Engine Optimization</h1>
                     <p>Helping Your Company be Top Results in Google Searches</p>
                     <a href="{% url 'seo' %}" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
             <div class="carousel-item" style="background-image: url('{% static 'coding.jpg' %}')">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h1>Reliable Hosting</h1>
                     <p>Fast and secure hosting for your business</p>
                     <a href="{% url 'hosting' %}" class="btn btn-primary">Learn More</a>
@@ -61,7 +61,8 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-<section/>
+</section>
+
 
 <section class="info-block">
   <div class="block a">

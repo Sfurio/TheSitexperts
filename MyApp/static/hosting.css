@@ -1,13 +1,14 @@
-/* aws-hosting.css */
+/* seo.css */
 
-/* General Styles for AWS Hosting Page */
+/* General Styles for SEO Page */
 body {
     font-family: Arial, sans-serif; /* Ensure readability */
     line-height: 1.6; /* Improve text readability */
+    background-color: #f8f9fa; /* Light background color */
 }
 
 header {
-    background-color: white; /* Light grey background for header */
+    background-color: #f8f9fa; /* Light background for the header */
     padding: 20px 0;
     text-align: center;
     margin-top: 25px;
@@ -16,15 +17,18 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    color: #343a40; /* Dark color for the header text */
+    color: black; /* Soft blue color */
     margin: 0;
 }
 
 
-
 /* Content Section */
-.content {
-    margin-bottom: 40px;
+.container .content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
 .content h2 {
@@ -45,46 +49,51 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.content ul {
-    list-style-type: disc;
-    margin-left: 20px;
+/* Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+    }
+
+    .content p {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
 }
 
-.content ul li {
-    margin-bottom: 10px;
-}
-
-/* Blockquote Styling */
-blockquote {
-    border-left: 4px solid #007bff; /* Blue accent for blockquotes */
-    padding-left: 15px;
-    margin: 20px 0;
-    background-color: #f8f9fa; /* Light background for blockquotes */
-    font-style: italic;
-}
-
-blockquote footer {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #343a40;
-}
-
-/* Contact Information */
-.contact-info {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f1f3f5; /* Light grey background for contact info */
+/* Image Styles */
+.service-image {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
 }
 
-.contact-info h2 {
-    font-size: 1.75rem;
-    color: #343a40;
+/* Button Styles */
+.submit-button {
+    background-color: #7a41ff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.contact-info p {
-    font-size: 1rem;
-    color: #495057;
+.submit-button:hover {
+    background-color: #4184ff;
+    transform: translateY(-2px);
 }
-
-/* Ensure no styles conflict with base.css */

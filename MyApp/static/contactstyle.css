@@ -82,9 +82,31 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .contact-container {
+        padding: 100px 20px; /* Adjust padding for mid-sized devices */
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+        margin-top: 45px;
+    }
+
+    .contact-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        max-width: 250px; /* Slightly smaller logo */
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .contact-title {
         font-size: 2rem;
+        margin-top: 45px;
     }
 
     .contact-btn {
@@ -99,7 +121,7 @@ body {
     }
 
     .logo-container {
-        margin-top: 20px; /* Space between contact info and logo */
+        margin-top: 40px; /* Space between contact info and logo */
     }
 
     .contact-btn {
