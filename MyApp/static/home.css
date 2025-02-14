@@ -136,26 +136,10 @@ body, html {
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
 }
-
 /* Service Section */
 #services {
     background-color: white;
     padding: 60px 0;
-}
-
-#services h3 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
-}
-
-/* Service Cards Grid Layout */
-#services .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* This allows cards to automatically stack */
-    gap: 20px; /* Space between cards */
-    justify-content: center;
 }
 
 .service-card {
@@ -174,18 +158,19 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 320px;
+    width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 0 auto;
     transition: all 0.3s ease;
-    margin: 10px; /* Prevent cards from touching each other */
 }
 
 .service:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
+#services h3{
+    margin-bottom: 30px;
+}
 .service h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -203,8 +188,23 @@ body, html {
     width: 100%;
     height: 225px;
     border-radius: 8px;
-    object-fit: cover; /* Ensure image fills the space properly */
 }
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Service Cards Grid Layout */
+#services .row {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* This allows cards to automatically stack */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+}
+
+
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
@@ -212,6 +212,7 @@ body, html {
     #services .row {
         grid-template-columns: 1fr; /* Stack cards in one column on small screens */
         gap: 15px; /* Smaller gap between cards */
+        display: grid;
     }
 
     .service {
@@ -324,10 +325,10 @@ body, html {
 
     /* Logo-Intro Section */
     #intro {
-        height: 60vh;
+        height: 50vh;
         padding: 20px;
         margin-top: -40px;
-        margin-bottom: -40px;
+        margin-bottom: -50px;
     }
 
     #intro h2 {
@@ -358,7 +359,7 @@ body, html {
         color: white;
         z-index: 2;
         padding: 0 20px;
-        font-size: 1.2rem; /* Adjust font size */
+        font-size: 1.8rem; /* Adjust font size */
         margin-top: 10px;
     }
 
@@ -374,25 +375,6 @@ body, html {
         z-index: 1;
     }
 
-    /* Adjust for mobile screens */
-    @media (max-width: 768px) {
-        .carousel-caption {
-            font-size: 1.1rem; /* Slightly smaller text for mobile */
-            padding: 0 10px;
-        }
-
-        /* Ensure the image height is adequate for mobile screens */
-        .carousel-item {
-            height: 50vh; /* Adjust the height for smaller screens */
-            background-size: cover;
-            background-position: center;
-        }
-    }
-
-    /* Adjust carousel caption for smaller screens */
-    .carousel-caption {
-        top: 40%; /* Lower the caption slightly to ensure it doesn't overlap with the top of the image */
-    }
     .carousel-item {
         height: 50vh; /* Adjust height for smaller screens */
         background-size: cover;
@@ -400,14 +382,14 @@ body, html {
     }
     .carousel-caption {
         padding: 0 15px; /* Add more padding for better spacing */
-        font-size: 1.2rem; /* Increase font size for better readability */
+        font-size: 1.8rem; /* Increase font size for better readability */
     }
 
     /* Optional: Add a darker overlay to improve text visibility */
     .carousel-item::before {
         background: rgba(0, 0, 0, 0.5); /* Darker overlay on smaller screens */
     }
-}
+
     /* Info Block Section */
     .info-block {
         flex-direction: column; /* Stack the blocks vertically */
